@@ -13,6 +13,8 @@ Bootstrapious Boilerplate Template
 * =====================
 *
 */
+
+
 [data-animate] {
   visibility: hidden;
 }
@@ -34,6 +36,10 @@ p {
 section {
   padding: 60px 0;
   position: relative;
+}
+
+#welcome-section{
+height: 100vh;
 }
 
 .text-bold {
@@ -126,12 +132,7 @@ nav.navbar {
   border-bottom: 1px solid #e6e6e6;
 }
 
-@media (max-width: 991.98px) {
-  nav.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
+
 
 nav.navbar .navbar-brand {
   text-transform: uppercase;
