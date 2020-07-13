@@ -27,14 +27,6 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <style type="text/css">
-      @media (max-width: 991.98px) {
-        nav.navbar {
-          padding-top: 15px;
-          padding-bottom: 15px;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- Reference item-->
@@ -49,7 +41,6 @@
               <li class="nav-item"><a href="#about" class="nav-link link-scroll">About</a></li>
               <li class="nav-item"><a href="#projects" class="nav-link link-scroll">My work</a></li>
               <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
-              <li class="nav-item"><a href="https://www.freecodecamp.org/fcc5d6e2503-a868-4059-ba4c-0bc5ab46de16" id="profile-link" class="nav-link link-scroll" target="_blank" >Profile</a></li>
             </ul>
           </div>
         </div>
@@ -59,7 +50,7 @@
 
     <section id="welcome-section" style="background: url(img/home.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
       <div class="container text-center">
-        <div data-animate="fadeInDown" class="logo"><img src="img/logo-big.png" alt="logo" width="130"></div>
+        <div data-animate="fadeInDown" class="logo"><img src="img/logo.png" alt="logo" width="120" style="margin-top: 5px;"></div>
         <h1 data-animate="fadeInDown" class="text-shadow mb-5">Hello, hola, नमस्ते !</h1>
         <p data-animate="slideInUp" class="h3 text-shadow text-400">I grind HTML and CSS and then weld them with PHP into beautiful and efficient websites.</p>
       </div>
@@ -161,13 +152,13 @@
                     </div>
                   </div>
                   <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/product.png" alt="" class="img-fluid">
+                    <div class="reference"><a href="#"><img src="img/product.jpg" alt="" class="img-fluid">
                         <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Product Landing Page</h3>
                           </div>
                         </div></a>
-                      <div data-images="img/product.png" class="sr-only reference-description">
+                      <div data-images="img/product.jpg" class="sr-only reference-description">
                         <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
                         <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
                         <p class="buttons text-center"><a href="https://codepen.io/masooma-jafari/full/VwvMxme" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a>
@@ -175,13 +166,13 @@
                     </div>
                   </div>
                   <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
-                    <div class="reference"><a href="#"><img src="img/technical.png" alt="" class="img-fluid">
+                    <div class="reference"><a href="#"><img src="img/technical.jpg" alt="" class="img-fluid">
                       <div class="overlay">
                           <div class="inner">
                             <h3 class="h4 reference-title">Technical Documantaion</h3>
                           </div>
                         </div></a>
-                      <div data-images="img/technical.png" class="sr-only reference-description">
+                      <div data-images="img/technical.jpg" class="sr-only reference-description">
                         <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
                         <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
                         <p class="buttons text-center"><a href="https://codepen.io/masooma-jafari/full/bGVLMMw" target="_blank" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a>
@@ -201,8 +192,10 @@
         </header>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form id="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbwKSMRHYhHYDSUtT9BeiKwEKUGX-Z05MnDuUl18/exec" enctype="text/plain">
-              <div class="messages"></div>
+            <form id="contact-form" class="gform" method="post" action="https://script.google.com/macros/s/AKfycbwKSMRHYhHYDSUtT9BeiKwEKUGX-Z05MnDuUl18/exec" data-email="from_email@example.com">
+              <div class="messages alert alert-success"  style="display:none">
+                Thanks for contacting me! I will get back to you soon!
+              </div>
               <div class="controls">
                 <div class="row">
                   <div class="col-md-6">
@@ -212,10 +205,10 @@
                     <input type="text" name="surname" id="surname" placeholder="Your lastname *" required="required" class="form-control">
                   </div>
                   <div class="col-md-6">
-                    <input type="text" name="email" id="email" placeholder="Your email *" required="required" class="form-control">
+                    <input type="email" name="email" id="email" placeholder="Your email *" required="required" class="form-control">
                   </div>
                   <div class="col-md-6">
-                    <input type="text" name="phone" id="phone" placeholder="Your phone" class="form-control">
+                    <input type="tel" name="phone" id="phone" placeholder="Your phone" class="form-control">
                   </div>
                   <div class="col-md-12">
                     <textarea name="message" id="message" placeholder="Message for me *" rows="4" required="required" class="form-control"></textarea>
@@ -245,6 +238,7 @@
       </div>
     </footer>
     <!-- JavaScript files-->
+    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
