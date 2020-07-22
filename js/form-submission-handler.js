@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    alert("hi");}
+
 (function() {
   // get all data in form and return object
   function getFormData(form) {
